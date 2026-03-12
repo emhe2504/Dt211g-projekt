@@ -1,0 +1,23 @@
+{
+  "name": "package.json",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build:js": "vite build",
+    "build:sass": "sass src/css/main.scss dist/css/main.css",
+    "build:docs": "npx jsdoc src/js/diagram-doc.js src/js/map-doc.js -d dist/docs",
+    "build": "npm run build:sass && npm run build:js && npm run build:docs",
+    "preview": "vite preview",
+    "sass": "sass src/css/main.scss src/css/main.css --watch"
+  },
+  "devDependencies": {
+    "jsdoc": "^4.0.5",
+    "sass": "^1.97.3",
+    "vite": "npm:rolldown-vite@7.3.1"
+  },
+  "overrides": {
+    "vite": "npm:rolldown-vite@7.3.1"
+  }
+}
