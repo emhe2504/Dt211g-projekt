@@ -1,6 +1,18 @@
-
-#search-button:hover, 
+#search-button:hover,
 #close:hover {
     background-color: rgb(187, 214, 245);
     transition: background-color 0.8s ease;
+}
+
+#nav-list {
+
+    li {
+
+        a:hover {
+        color: rgb(187, 214, 245);
+        border-bottom: 1px solid rgb(187, 214, 245);
+        transition: color 0.8s ease;
+        transition: border-bottom 0.6s ease;
+    }
+    }
 }

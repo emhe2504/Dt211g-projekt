@@ -72,7 +72,7 @@ export function printInfo(jsonData, value) {
             const symbol = curr.symbol;
 
             const currencySpot = document.createElement("p");
-            currencySpot.textContent = `Currency/Currencies: ${currancy}, (Symbol: ${symbol})`;
+            currencySpot.textContent = `Currency: ${currancy}, (Symbol: ${symbol})`;
             restSpot.appendChild(currencySpot);
         })
 
