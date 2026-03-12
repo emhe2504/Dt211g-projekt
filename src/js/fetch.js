@@ -52,7 +52,7 @@ export function printInfo(jsonData, value) {
         const flag = countryInfo.flags.png;
         const img = document.createElement("img");
         img.src = flag;
-        img.alt = `${country}s flagga`;
+        img.alt = `Flag of ${country}`;
         flagSpot.appendChild(img);
 
 
