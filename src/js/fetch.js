@@ -3,7 +3,7 @@ import { getTime } from "./nextFetch.js";
 
 export async function getInfo(value) {
 
-    const link = `https://restcountries.com/v3.1/region/europe?fields=name,capital,flags,languages,currencies`;
+    const link = `https://restcountries.com/v3.1/region/europe?fields=name,capital,flags,languages,currencies,population`;
 
     try {
         const linkData = await fetch(link);
@@ -40,7 +40,6 @@ export function printInfo(jsonData, value) {
 
         infoSpot.classList.remove("is_hidden");
 
-
         nameSpot.innerHTML = `<h3>${country}</h3>`;
 
 
@@ -53,7 +52,7 @@ export function printInfo(jsonData, value) {
 
         const capital = countryInfo.capital[0];
         const capitalSpot = document.createElement("p");
-        capitalSpot.textContent = `Capital -- ${capital}`;
+        capitalSpot.textContent = `Capital: ${capital}`;
         restSpot.appendChild(capitalSpot);
         getTime(capital);
 
@@ -62,7 +61,7 @@ export function printInfo(jsonData, value) {
         const langName = Object.values(languages);
 
         const languageSpot = document.createElement("p");
-        languageSpot.textContent = `Language/Languages -- ${langName}`;
+        languageSpot.textContent = `Language/Languages: ${langName}`;
         restSpot.appendChild(languageSpot);
 
         const currencies = countryInfo.currencies;
@@ -73,9 +72,14 @@ export function printInfo(jsonData, value) {
             const symbol = curr.symbol;
 
             const currencySpot = document.createElement("p");
-            currencySpot.textContent = `Currency/Currencies -- ${currancy}, (Symbol: ${symbol})`;
+            currencySpot.textContent = `Currency/Currencies: ${currancy}, (Symbol: ${symbol})`;
             restSpot.appendChild(currencySpot);
         })
+
+        const population = countryInfo.population;
+        const popSpot = document.createElement("p");
+        popSpot.textContent = `Population: ${population} people`;
+        restSpot.appendChild(popSpot);
 
     }
 }

@@ -80,8 +80,21 @@ main {
             letter-spacing: 0.5px;
         }
 
-        #button-div {
-            margin-bottom: 2%;
+        #landSuggestions {
+
+            display: grid;
+            justify-self: center;
+            border: 1px solid white;
+            padding-top: 2%;
+            padding-bottom: 2%;
+            width: 90%;
+
+            #keywords {
+            list-style: none;
+            color: white;
+            margin-top: 6%;
+            padding-left: 0;
+        }
         }
     }
 

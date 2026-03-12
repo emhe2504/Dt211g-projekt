@@ -7,8 +7,12 @@ export function searchInfo() {
 
     button.addEventListener("click", () => {
 
-        const value = searchPlace.value.charAt(0).toUpperCase() + searchPlace.value.slice(1).toLowerCase();
+        const value = searchPlace.value
+            .split(' ')
+            .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+            .join(' ');
+            
         getInfo(value);
         searchPlace.value = "";
-    }); 
+    });
 }

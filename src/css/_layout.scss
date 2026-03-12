@@ -52,12 +52,12 @@ main {
             text-align: center;
         }
 
-        #button-div {
+        #keywords {
             display: grid;
             justify-self: center;
             justify-items: center;
-            grid-template-columns: 1fr 1fr 1fr;
-            width: 80%;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            width: 95%;
         }
     }
 
