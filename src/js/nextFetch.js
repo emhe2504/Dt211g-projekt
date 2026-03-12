@@ -1,4 +1,3 @@
-import { printInfo } from "./fetch.js";
 
 export async function getTime(capital) {
 
@@ -24,16 +23,18 @@ function sendTime(jsonData) {
     const zoneName = jsonData.zoneName;
     const abbreviation = jsonData.abbreviation;
 
+    /*Ta fram tid och tidszon, skicka vidare */
+
     addTime(dateTime);
     addTimeZone(zoneName, abbreviation);
 }
+
 
 function addTime(dateTime) {
 
     const timeSpot = document.getElementById("timeSpot");
 
     timeSpot.innerHTML = "";
-
     timeSpot.innerHTML = `<p>Date and time in capital: ${dateTime}</p>`;
 
     if(!dateTime) {
@@ -42,12 +43,12 @@ function addTime(dateTime) {
     }
 }
 
+
 function addTimeZone(zoneName, abbreviation) {
 
     const timeZoneSpot = document.getElementById("timeZoneSpot");
 
     timeZoneSpot.innerHTML = "";
-
     timeZoneSpot.innerHTML = `<p>Timezone: ${zoneName}, ${abbreviation}</p>`;
 
     if(!zoneName || !abbreviation) {

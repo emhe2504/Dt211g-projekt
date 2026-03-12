@@ -108,6 +108,24 @@ main {
     }
 }
 
+#about-section {
+    display: grid;
+    justify-self: center;
+    width: 85%;
+
+    h2 {
+        justify-self: center;
+    }
+
+    #about-div {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        align-items: center;
+    }
+}
+
 footer {
 
     display: grid;

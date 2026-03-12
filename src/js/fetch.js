@@ -1,4 +1,3 @@
-import { searchInfo } from "./search.js";
 import { getTime } from "./nextFetch.js";
 
 export async function getInfo(value) {
@@ -29,6 +28,8 @@ export function printInfo(jsonData, value) {
     if (countryInfo) {
         const country = countryInfo.name.common;
 
+        /*De olika platserna för utskrift */
+
         const infoSpot = document.getElementById("result-section");
         const nameSpot = document.getElementById("nameSpot");
         const flagSpot = document.getElementById("flagSpot");
@@ -40,8 +41,13 @@ export function printInfo(jsonData, value) {
 
         infoSpot.classList.remove("is_hidden");
 
+
+        /*Skriv ut land */
+
         nameSpot.innerHTML = `<h3>${country}</h3>`;
 
+
+        /*Skriv ut flagga */
 
         const flag = countryInfo.flags.png;
         const img = document.createElement("img");
@@ -50,12 +56,17 @@ export function printInfo(jsonData, value) {
         flagSpot.appendChild(img);
 
 
+        /*Skriv ut huvudstad */
+
         const capital = countryInfo.capital[0];
         const capitalSpot = document.createElement("p");
         capitalSpot.textContent = `Capital: ${capital}`;
         restSpot.appendChild(capitalSpot);
-        getTime(capital);
 
+        getTime(capital);   /*Anger stad till annat API för tid i huvustad */
+
+
+        /*Skriv ut språk */
 
         const languages = countryInfo.languages;
         const langName = Object.values(languages);
@@ -63,6 +74,9 @@ export function printInfo(jsonData, value) {
         const languageSpot = document.createElement("p");
         languageSpot.textContent = `Language/Languages: ${langName}`;
         restSpot.appendChild(languageSpot);
+
+
+        /*Skriv ut valuta */
 
         const currencies = countryInfo.currencies;
         const currName = Object.values(currencies);
@@ -76,6 +90,9 @@ export function printInfo(jsonData, value) {
             restSpot.appendChild(currencySpot);
         })
 
+
+        /*Skriv ut population */
+
         const population = countryInfo.population;
         const popSpot = document.createElement("p");
         popSpot.textContent = `Population: ${population} people`;
@@ -83,16 +100,14 @@ export function printInfo(jsonData, value) {
 
     } else {
 
+        /*Om skriver fel eller inte kan hitta land */
+
         const wrong = document.getElementById("wrong");
         const infoSpot = document.getElementById("result-section");
         const search = document.getElementById("search-spot");
 
         wrong.classList.remove("is_hidden");
         infoSpot.classList.add("is_hidden");
-
-        search.addEventListener("input", () => {
-            wrong.classList.add("is_hidden");
-        })
 
     }
 }
