@@ -1,0 +1,63 @@
+@use "variables";
+
+.is_hidden {
+  display: none !important;
+}
+
+.modak {
+  font-family: "Modak", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto {
+  font-family: "Roboto", sans-serif;
+}
+
+#search-spot {
+    width: 60%;
+    border: none;
+    padding: 1.5%;
+    padding-right: 0;
+    margin-bottom: 2%;
+}
+
+#search-button {
+    width: 12%;
+    border: none;
+    padding: 1%;
+    margin-bottom: 10%;
+    font-size: 16px;
+    font-weight: bold;
+    color: variables.$primary-color;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+}
+
+#spanien-button,
+#tyskland-button,
+#albanien-button {
+    width: 55%;
+    border: none;
+    padding: 2%;
+    padding-top: 3.5%;
+    padding-bottom: 3.5%;
+    font-size: 16px;
+    font-weight: bold;
+    color: variables.$primary-color;
+    cursor: pointer;
+}
+
+#close {
+    width: 12%;
+    border: 1px solid variables.$primary-color;
+    padding: 1%;
+    margin-bottom: 4%;
+    margin-left: 8%;
+    font-size: 16px;
+    font-weight: bold;
+    color: variables.$primary-color;
+    letter-spacing: 0.5px;
+    background-color: white;
+    cursor: pointer;
+}

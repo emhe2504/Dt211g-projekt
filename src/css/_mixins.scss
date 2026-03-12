@@ -1,0 +1,21 @@
+@use "variables";
+
+@mixin Placement() {
+    display: grid;
+    width: 50%;
+    justify-self: center;
+    padding: 2%;
+    padding-top: 3%;
+    padding-bottom: 5%;
+}
+
+@mixin secPlacement() {
+    display: grid;
+    width: 65%;
+    justify-self: center;
+    padding: 2%;
+}
+
+@mixin Design() {
+    background-color: variables.$primary-color;
+}

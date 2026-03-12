@@ -1,0 +1,146 @@
+@use "mixins";
+
+header {
+
+    picture {
+        display: grid;
+        justify-self: center;
+    }
+
+    #header-text {
+        display: grid;
+        grid-template-columns: 80% 1fr;
+        align-items: baseline;
+    }
+
+    #nav-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 0;
+        text-align: center;
+    }
+}
+
+main {
+
+    #start-section {
+        img {
+            width: 100%;
+        }
+
+        #start-text {
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    #search-section {
+        @include mixins.Placement();
+        position: absolute;
+        top: 128%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        #search-start {
+            display: grid;
+        }
+
+        p {
+            display: grid;
+            text-align: center;
+        }
+
+        #button-div {
+            display: grid;
+            justify-self: center;
+            justify-items: center;
+            grid-template-columns: 1fr 1fr 1fr;
+            width: 80%;
+        }
+    }
+
+    #result-section {
+        display: grid;
+        justify-self: center;
+        width: 55%;
+
+        #nameSpot {
+            display: grid;
+
+            h3 {
+                text-align: center
+            }
+        }
+
+        #flagSpot {
+            display: grid;
+
+            img {
+                display: grid;
+                justify-self: center;
+                width: 22%;
+            }
+        }
+    }
+
+    #destination-section {
+        @include mixins.secPlacement();
+
+        h3 {
+            text-align: center;
+        }
+
+        #suggestion-one,
+        #suggestion-two {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-items: center;
+        }
+
+        #pictext-one,
+        #pictext-two {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            text-align: center;
+        }
+    }
+}
+
+footer {
+
+    display: grid;
+    width: 100%;
+
+    h4 {
+        font-size: 20px;
+    }
+
+    #instagram {
+        display: grid;
+        justify-self: center;
+        text-align: center;
+    }
+
+    #link-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-self: center;
+        justify-items: center;
+        width: 60%;
+
+        ul {
+            list-style: none;
+        }
+    }
+
+    picture {
+        display: grid;
+        justify-self: center;
+    }
+
+    p {
+        text-align: center;
+    }
+}
