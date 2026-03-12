@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>EuropaWiki</title>
+    <link rel="stylesheet" href="/src/css/main.scss">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Modak&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <a href="/">
+                <picture>
+                    <source srcset="/images/logo.webp" type="image/webp">
+                    <img src="/images/logo.jpg" width="200" alt="Logo map with question mark and text">
+                </picture>
+            </a>
+            <div id="header-text">
+                <h1><a class="modak" href="/">EuropaWiki</a></h1>
+                <nav>
+                    <ul id="nav-list">
+                        <li><a class="roboto" href="/">Search Country</a></li>
+                        <li><a class="roboto" href="/about.html">About us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section>
+                <div id="start-section">
+                    <picture>
+                        <source srcset="/images/background.webp" type="image/webp">
+                        <img src="/images/background.jpg"
+                            alt="Landscape with mountains, forest, water and a small island with church">
+                    </picture>
+                    <div id="start-text" class="roboto">
+                        <h2>Search Country</h2>
+                        <p>Find out more about your destination in Europe!</p>
+                    </div>
+                </div>
+            </section>
+            <section id="search-section" class="roboto">
+                <div id="search-start">
+                    <h3>Search by land in Europe:</h3>
+                    <input type="text" id="search-spot" placeholder="Ex. Spain">
+                    <button id="search-button">Search</button>
+                </div>
+                <p>What others searched for:</p>
+                <div id="button-div">
+                    <button id="spanien-button">Spain</button>
+                    <button id="tyskland-button">Germany</button>
+                    <button id="albanien-button">Albania</button>
+                </div>
+            </section>
+            <section id="result-section" class="roboto is_hidden">
+                <div id="nameSpot"></div>
+                <div id="flagSpot"></div>
+                <div id="restOfInfo"></div>
+                <button id="close">Stäng</button>
+            </section>
+            <section id="destination-section" class="roboto">
+                <h3>Haven't decided on a destination yet?</h3>
+                <div id="suggestion-one">
+                    <picture>
+                        <source srcset="/images/Madrid.webp" type="image/webp">
+                        <img src="/images/Madrid.jpg" width="450" alt="Buildings and a road with vehicles in Madrid">
+                    </picture>
+                    <picture>
+                        <source srcset="/images/Santorini.webp" type="image/webp">
+                        <img src="/images/Santorini.jpg" width="450" alt="Buildings, mountains and water in Santorini">
+                    </picture>
+                </div>
+                <div id="pictext-one">
+                    <p>Madrid, Spain</p>
+                    <p>Santorini, Greece</p>
+                </div>
+                <div id="suggestion-two">
+                    <picture>
+                        <source srcset="/images/Prag.webp" type="image/webp">
+                        <img src="/images/Prag.jpg" width="450" alt="Buildings, water and bridge with people in Prague">
+                    </picture>
+                    <picture>
+                        <source srcset="/images/Helsingfors.webp" type="image/webp">
+                        <img src="/images/Helsingfors.jpg" width="450"
+                            alt="Buildings, church and water at night in Helsinki">
+                    </picture>
+                </div>
+                <div id="pictext-two">
+                    <p>Prague, Czech Republic</p>
+                    <p>Helsinki, Finland</p>
+                </div>
+            </section>
+        </main>
+        <footer class="roboto">
+            <section id="instagram">
+                <h4>Follow us on Instagram:</h4>
+                <p>Europa_Wiki</p>
+            </section>
+            <section id="link-section">
+            <div id="kontakt">
+                <h4>Contact</h4>
+                <ul>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div id="EuropaWiki">
+                <h4>EuropaWiki</h4>
+                <ul>
+                    <li><a href="/about">About us</a></li>
+                    <li>Integrity</li>
+                    <li>Accessibility</li>
+                </ul>
+            </div>
+            </section>
+            <picture>
+                <source srcset="/images/ikon.webp" type="image/webp">
+                <img src="/images/ikon.jpg" width="90"
+                    alt="Icon, large question mark with text">
+            </picture>
+            <p>© EuropaWiki 2026</p>
+        </footer>
+    </div>
+    <script type="module" src="/src/js/main.js"></script>
+</body>
+
+</html>
