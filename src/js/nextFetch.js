@@ -21,8 +21,11 @@ export async function getTime(capital) {
 function sendTime(jsonData) {
 
     const dateTime = jsonData.formatted;
+    const zoneName = jsonData.zoneName;
+    const abbreviation = jsonData.abbreviation;
 
     addTime(dateTime);
+    addTimeZone(zoneName, abbreviation);
 }
 
 function addTime(dateTime) {
@@ -35,6 +38,20 @@ function addTime(dateTime) {
 
     if(!dateTime) {
 
-        timeSpot.innerHTML = `<p>Date and time in capital: Sorry, can't find time</p>`;
+        timeSpot.innerHTML = `<p>Date and time in capital: Can't find time</p>`;
+    }
+}
+
+function addTimeZone(zoneName, abbreviation) {
+
+    const timeZoneSpot = document.getElementById("timeZoneSpot");
+
+    timeZoneSpot.innerHTML = "";
+
+    timeZoneSpot.innerHTML = `<p>Timezone: ${zoneName}, ${abbreviation}</p>`;
+
+    if(!zoneName || !abbreviation) {
+
+        timeZoneSpot.innerHTML = `<p>Timezone: Can't find timezone</p>`;
     }
 }
