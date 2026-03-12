@@ -93,7 +93,7 @@ export function printInfo(jsonData, value) {
 
         /*Skriv ut population */
 
-        const population = countryInfo.population;
+        const population = countryInfo.population.toLocaleString();
         const popSpot = document.createElement("p");
         popSpot.textContent = `Population: ${population} people`;
         restSpot.appendChild(popSpot);
