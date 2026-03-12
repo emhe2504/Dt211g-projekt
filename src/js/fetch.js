@@ -69,7 +69,7 @@ export function printInfo(jsonData, value) {
         /*Skriv ut språk */
 
         const languages = countryInfo.languages;
-        const langName = Object.values(languages);
+        const langName = Object.values(languages).join(", ");
 
         const languageSpot = document.createElement("p");
         languageSpot.textContent = `Language/Languages: ${langName}`;
