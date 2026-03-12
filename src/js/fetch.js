@@ -81,6 +81,19 @@ export function printInfo(jsonData, value) {
         popSpot.textContent = `Population: ${population} people`;
         restSpot.appendChild(popSpot);
 
+    } else {
+
+        const wrong = document.getElementById("wrong");
+        const infoSpot = document.getElementById("result-section");
+        const search = document.getElementById("search-spot");
+
+        wrong.classList.remove("is_hidden");
+        infoSpot.classList.add("is_hidden");
+
+        search.addEventListener("input", () => {
+            wrong.classList.add("is_hidden");
+        })
+
     }
 }
 

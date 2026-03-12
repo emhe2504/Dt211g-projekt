@@ -96,6 +96,17 @@ main {
             padding-left: 0;
         }
         }
+
+        #wrong {
+
+            display: grid;
+
+             p {
+                text-align: left;
+                font-weight: 300;
+                font-size: 14px;
+             }
+        }
     }
 
     #destination-section {
