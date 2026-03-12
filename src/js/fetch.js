@@ -1,4 +1,5 @@
 import { searchInfo } from "./search.js";
+import { getTime } from "./nextFetch.js";
 
 export async function getInfo(value) {
 
@@ -52,8 +53,9 @@ export function printInfo(jsonData, value) {
 
         const capital = countryInfo.capital[0];
         const capitalSpot = document.createElement("p");
-        capitalSpot.textContent = `Capital - ${capital}`;
+        capitalSpot.textContent = `Capital -- ${capital}`;
         restSpot.appendChild(capitalSpot);
+        getTime(capital);
 
 
         const languages = countryInfo.languages;
