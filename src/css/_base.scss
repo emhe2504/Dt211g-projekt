@@ -18,11 +18,29 @@ header {
             color: white;
             letter-spacing: 0.5px;
             padding-left: 2%;
+
+            @media only screen and (max-width: 900px) {
+                font-size: 50px;
+            }
+
+            @media only screen and (max-width: 700px) {
+                font-size: 40px;
+            }
+
+            @media only screen and (max-width: 600px) {
+                font-size: 30px;
+            }
         }
     }
 
     #nav-list {
         list-style: none;
+        margin-bottom: 0;
+        margin-right: 4%;
+
+        @media only screen and (max-width: 600px) {
+            padding-left: 0;
+        }
 
         a {
             text-decoration: none;
@@ -31,6 +49,22 @@ header {
             letter-spacing: 0.5px;
             border-bottom: 1px solid white;
             font-weight: bold;
+
+            @media only screen and (max-width: 900px) {
+                font-size: 16px;
+            }
+
+            @media only screen and (max-width: 700px) {
+                font-size: 15px;
+            }
+
+            @media only screen and (max-width: 600px) {
+                font-size: 12px;
+            }
+
+            @media only screen and (max-width: 500px) {
+                font-size: 11px;
+            }
         }
     }
 }
@@ -49,12 +83,52 @@ main {
 
             h2 {
                 font-size: 50px;
+
+                @media only screen and (max-width: 1350px) {
+                    font-size: 40px;
+                }
+
+                @media only screen and (max-width: 1200px) {
+                    font-size: 35px;
+                }
+
+                @media only screen and (max-width: 900px) {
+                    font-size: 30px;
+                }
+
+                @media only screen and (max-width: 700px) {
+                    font-size: 24px;
+                }
+
+                @media only screen and (max-width: 600px) {
+                    font-size: 20px;
+                }
             }
 
             p {
                 font-weight: bold;
                 font-size: 22px;
                 letter-spacing: 0.5px;
+
+                @media only screen and (max-width: 1350px) {
+                    font-size: 20px;
+                }
+
+                @media only screen and (max-width: 1200px) {
+                    font-size: 19px;
+                }
+
+                @media only screen and (max-width: 900px) {
+                    font-size: 17px;
+                }
+
+                @media only screen and (max-width: 700px) {
+                    font-size: 15px;
+                }
+
+                @media only screen and (max-width: 600px) {
+                    font-size: 12px;
+                }
             }
         }
     }
@@ -66,6 +140,18 @@ main {
             font-size: 24px;
             color: white;
             letter-spacing: 0.5px;
+
+            @media only screen and (max-width: 1200px) {
+                font-size: 22px;
+            }
+
+            @media only screen and (max-width: 1000px) {
+                font-size: 19px;
+            }
+
+            @media only screen and (max-width: 600px) {
+                font-size: 17px;
+            }
         }
 
         #search-start {
@@ -78,6 +164,14 @@ main {
             margin-bottom: 3%;
             font-size: 18px;
             letter-spacing: 0.5px;
+
+            @media only screen and (max-width: 1200px) {
+                font-size: 15px;
+            }
+
+            @media only screen and (max-width: 600px) {
+                font-size: 13px;
+            }
         }
 
         #landSuggestions {
@@ -94,6 +188,14 @@ main {
                 color: white;
                 margin-top: 6%;
                 padding-left: 0;
+
+                @media only screen and (max-width: 1200px) {
+                    font-size: 14px;
+                }
+
+                @media only screen and (max-width: 600px) {
+                    font-size: 12px;
+                }
             }
         }
 
@@ -105,17 +207,62 @@ main {
                 text-align: left;
                 font-weight: 300;
                 font-size: 14px;
+
+                @media only screen and (max-width: 1200px) {
+                    font-size: 13px;
+                }
+
+                @media only screen and (max-width: 600px) {
+                    font-size: 10px;
+                }
             }
         }
     }
 
     #destination-section {
-        margin-top: 15%;
+
+        margin-top: 20%;
+
+        @media only screen and (max-width: 1650px) {
+            margin-top: 25%;
+        }
+
+        @media only screen and (max-width: 1400px) {
+            margin-top: 30%;
+        }
+
+        @media only screen and (max-width: 1050px) {
+            margin-top: 40%;
+        }
+
+        @media only screen and (max-width: 950px) {
+            margin-top: 55%;
+        }
+
+        @media only screen and (max-width: 800px) {
+            margin-top: 65%;
+        }
+
+        @media only screen and (max-width: 650px) {
+            margin-top: 75%;
+        }
 
         h3 {
             font-size: 24px;
             color: variables.$primary-color;
             letter-spacing: 0.5px;
+
+            @media only screen and (max-width: 1050px) {
+                font-size: 20px;
+            }
+
+            @media only screen and (max-width: 800px) {
+                font-size: 18px;
+            }
+
+            @media only screen and (max-width: 650px) {
+                font-size: 15px;
+            }
         }
 
         #suggestion-one,
@@ -128,19 +275,63 @@ main {
             font-weight: bold;
             margin-top: 2%;
             margin-bottom: 3%;
+
+            p {
+
+                @media only screen and (max-width: 1050px) {
+                    font-size: 14px;
+                }
+
+                @media only screen and (max-width: 650px) {
+                    font-size: 11px;
+                }
+
+                @media only screen and (max-width: 500px) {
+                    width: 100%;
+                    font-size: 10px;
+                }
+            }
         }
     }
 
     #result-section {
         border: 2px solid variables.$primary-color;
-        margin-top: 15%;
+        margin-top: 25%;
         background-color: rgb(216, 239, 250);
+
+        @media only screen and (max-width: 1550px) {
+            margin-top: 30%;
+        }
+
+        @media only screen and (max-width: 1050px) {
+            margin-top: 45%;
+        }
+
+        @media only screen and (max-width: 900px) {
+            margin-top: 60%;
+        }
+
+        @media only screen and (max-width: 720px) {
+            margin-top: 65%;
+        }
+
+        @media only screen and (max-width: 600px) {
+            margin-top: 70%;
+        }
+
+        @media only screen and (max-width: 550px) {
+            margin-top: 75%;
+        }
 
         h3 {
             font-size: 24px;
             color: variables.$primary-color;
             letter-spacing: 0.5px;
             margin-top: 3%;
+
+            @media only screen and (max-width: 700px) {
+                font-size: 20px;
+            }
         }
 
         #flagSpot {
@@ -165,8 +356,20 @@ main {
             color: variables.$primary-color;
             font-size: 18px;
             font-weight: bold;
+
+            @media only screen and (max-width: 1050px) {
+                font-size: 15px;
+            }
+
+            @media only screen and (max-width: 700px) {
+                font-size: 12px;
+            }
+
+            @media only screen and (max-width: 550px) {
+                font-size: 10px;
+            }
         }
-        
+
         #tempSpot {
 
             img {
@@ -207,17 +410,49 @@ footer {
     color: white;
     letter-spacing: 0.5px;
     line-height: 2em;
-    margin-top: 3%;
+    margin-top: 6%;
+
+    @media only screen and (max-width: 500px) {
+        line-height: 1.5em;
+    }
 
     #instagram {
         margin-top: 3%;
 
+        h4 {
+            @media only screen and (max-width: 700px) {
+                font-size: 17px;
+            }
+
+            @media only screen and (max-width: 500px) {
+                font-size: 15px;
+            }
+        }
+
         p {
             margin-top: 0;
+
+            @media only screen and (max-width: 700px) {
+                font-size: 14px;
+            }
+
+            @media only screen and (max-width: 500px) {
+                font-size: 11px;
+            }
         }
     }
 
     #link-section {
+
+        h4 {
+            @media only screen and (max-width: 700px) {
+                font-size: 17px;
+            }
+
+            @media only screen and (max-width: 500px) {
+                font-size: 15px;
+            }
+        }
 
         ul {
 
@@ -227,8 +462,24 @@ footer {
                 text-decoration: underline;
                 cursor: pointer;
 
+                @media only screen and (max-width: 700px) {
+                    font-size: 14px;
+                }
+
+                @media only screen and (max-width: 500px) {
+                    font-size: 11px;
+                }
+
                 a {
                     color: white;
+
+                    @media only screen and (max-width: 700px) {
+                        font-size: 14px;
+                    }
+
+                    @media only screen and (max-width: 500px) {
+                        font-size: 11px;
+                    }
                 }
             }
         }
@@ -240,5 +491,13 @@ footer {
 
     p {
         margin-bottom: 3%;
+
+        @media only screen and (max-width: 700px) {
+            font-size: 14px;
+        }
+
+        @media only screen and (max-width: 500px) {
+            font-size: 11px;
+        }
     }
 }

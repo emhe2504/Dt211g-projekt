@@ -22,6 +22,17 @@ export async function getInfo(value) {
     }
 }
 
+/**
+ * Deklarera olika variabler för platser */
+
+const infoSpot = document.getElementById("result-section");
+const nameSpot = document.getElementById("nameSpot");
+const flagSpot = document.getElementById("flagSpot");
+const restSpot = document.getElementById("restOfInfo");
+const destinations = document.getElementById("destination-section");
+const search = document.getElementById("search-section");
+
+
 export function printInfo(jsonData, value) {
 
     const countryInfo = jsonData.find(data => data.name.common === value);
@@ -29,17 +40,15 @@ export function printInfo(jsonData, value) {
     if (countryInfo) {
         const country = countryInfo.name.common;
 
-        /*De olika platserna för utskrift */
-
-        const infoSpot = document.getElementById("result-section");
-        const nameSpot = document.getElementById("nameSpot");
-        const flagSpot = document.getElementById("flagSpot");
-        const restSpot = document.getElementById("restOfInfo");
-
         flagSpot.innerHTML = "";
         restSpot.innerHTML = "";
 
         infoSpot.classList.remove("is_hidden");
+
+        if (!infoSpot.classList.contains("is_hidden")) {
+            destinations.classList.add("is_hidden");
+            infoSpot.scrollIntoView();
+        }
 
 
         /*Skriv ut land */
@@ -104,20 +113,28 @@ export function printInfo(jsonData, value) {
         /*Om skriver fel eller inte kan hitta land */
 
         const wrong = document.getElementById("wrong");
-        const infoSpot = document.getElementById("result-section");
 
         wrong.classList.remove("is_hidden");
         infoSpot.classList.add("is_hidden");
+
+        if (infoSpot.classList.contains("is_hidden")) {
+            destinations.classList.remove("is_hidden");
+        }
 
     }
 }
 
 export function closeInfo() {
 
-    const infoSpot = document.getElementById("result-section");
     const closeButton = document.getElementById("close");
 
-        closeButton.addEventListener("click", () => {
-            infoSpot.classList.toggle("is_hidden");
-        })
+    closeButton.addEventListener("click", () => {
+
+        infoSpot.classList.toggle("is_hidden");
+
+        if (infoSpot.classList.contains("is_hidden")) {
+            destinations.classList.remove("is_hidden");
+            search.scrollIntoView();
+        }
+    })
 }

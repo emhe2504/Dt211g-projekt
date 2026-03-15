@@ -15,35 +15,77 @@
 }
 
 #search-spot {
-    width: 60%;
-    border: none;
-    padding: 1.5%;
-    padding-right: 0;
-    margin-bottom: 2%;
+  width: 60%;
+  border: none;
+  padding: 1.5%;
+  padding-right: 0;
+  margin-bottom: 2%;
+
+  @media only screen and (max-width: 1200px) {
+    width: 70%;
+  }
+
+  @media only screen and (max-width: 600px) {
+    width: 75%;
+  }
+}
+
+#search-spot::placeholder {
+  @media only screen and (max-width: 650px) {
+    font-size: 11px;
+  }
+}
+
+input[type="text"] {
+  @media only screen and (max-width: 650px) {
+    font-size: 11px;
+  }
 }
 
 #search-button {
-    width: 12%;
-    border: none;
-    padding: 1%;
-    margin-bottom: 10%;
-    font-size: 16px;
-    font-weight: bold;
-    color: variables.$primary-color;
-    letter-spacing: 0.5px;
-    cursor: pointer;
+  width: 12%;
+  border: none;
+  padding: 1%;
+  margin-bottom: 10%;
+  font-size: 16px;
+  font-weight: bold;
+  color: variables.$primary-color;
+  letter-spacing: 0.5px;
+  cursor: pointer;
 }
 
 #close {
-    width: 12%;
-    border: 1px solid variables.$primary-color;
-    padding: 1%;
-    margin-bottom: 4%;
-    margin-left: 8%;
-    font-size: 16px;
-    font-weight: bold;
-    color: variables.$primary-color;
-    letter-spacing: 0.5px;
-    background-color: white;
-    cursor: pointer;
+  width: 12%;
+  border: 1px solid variables.$primary-color;
+  padding: 1%;
+  margin-bottom: 4%;
+  margin-left: 8%;
+  font-size: 16px;
+  font-weight: bold;
+  color: variables.$primary-color;
+  letter-spacing: 0.5px;
+  background-color: white;
+  cursor: pointer;
+}
+
+#search-button,
+#close {
+  @media only screen and (max-width: 1200px) {
+    width: 14%;
+    font-size: 14px;
+  }
+
+  @media only screen and (max-width: 1000px) {
+    font-size: 12px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    width: 18%;
+    font-size: 11px;
+    margin-top: 2%;
+  }
+
+  @media only screen and (max-width: 500px) {
+    width: 19%;
+  }
 }

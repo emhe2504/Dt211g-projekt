@@ -5,19 +5,40 @@ header {
     picture {
         display: grid;
         justify-self: center;
+
+        img {
+            @media only screen and (max-width: 700px) {
+                width: 150px;
+            }
+
+            @media only screen and (max-width: 600px) {
+                width: 120px;
+            }
+        }
     }
 
     #header-text {
         display: grid;
-        grid-template-columns: 80% 1fr;
+        grid-template-columns: 70% 1fr;
         align-items: baseline;
+
+        @media only screen and (max-width: 1200px) {
+            grid-template-columns: 60% 1fr;
+        }
+
+        @media only screen and (max-width: 900px) {
+            grid-template-columns: 55% 1fr;
+        }
     }
 
     #nav-list {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        margin-bottom: 0;
+        grid-template-columns: 1fr 35%;
         text-align: center;
+
+        @media only screen and (max-width: 500px) {
+            grid-template-columns: 1fr 40%;
+        }
     }
 }
 
@@ -30,9 +51,36 @@ main {
 
         #start-text {
             position: absolute;
+            width: 45%;
             top: 70%;
             left: 50%;
             transform: translate(-50%, -50%);
+
+            @media only screen and (max-width: 1550px) {
+                top: 65%;
+            }
+
+            @media only screen and (max-width: 1200px) {
+                top: 60%;
+            }
+
+            @media only screen and (max-width: 900px) {
+                width: 60%;
+                top: 52%;
+            }
+
+            @media only screen and (max-width: 700px) {
+                top: 41%;
+            }
+
+            @media only screen and (max-width: 600px) {
+                width: 65%;
+                top: 35%;
+            }
+
+            @media only screen and (max-width: 600px) {
+                top: 33%;
+            }
         }
     }
 
@@ -42,6 +90,38 @@ main {
         top: 128%;
         left: 50%;
         transform: translate(-50%, -50%);
+
+        @media only screen and (max-width: 1550px) {
+            top: 115%;
+            width: 55%;
+        }
+
+        @media only screen and (max-width: 1350px) {
+            top: 110%;
+            width: 57%;
+        }
+
+        @media only screen and (max-width: 1200px) {
+            top: 100%;
+        }
+
+        @media only screen and (max-width: 900px) {
+            top: 92%;
+            width: 72%;
+        }
+
+        @media only screen and (max-width: 700px) {
+            top: 76%;
+        }
+
+        @media only screen and (max-width: 600px) {
+            top: 65%;
+            width: 76%;
+        }
+
+        @media only screen and (max-width: 500px) {
+            top: 63%;
+        }
 
         #search-start {
             display: grid;
@@ -58,6 +138,11 @@ main {
             justify-items: center;
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
             width: 95%;
+
+            @media only screen and (max-width: 1000px) {
+                grid-template-columns: none;
+                line-height: 1.6em;
+            }
         }
     }
 
@@ -65,6 +150,14 @@ main {
         display: grid;
         justify-self: center;
         width: 55%;
+
+        @media only screen and (max-width: 1200px) {
+            width: 65%;
+        }
+
+        @media only screen and (max-width: 1050px) {
+            width: 80%;
+        }
 
         #nameSpot {
             display: grid;
@@ -89,6 +182,31 @@ main {
         #tempSpot {
             display: grid;
             width: 60%;
+
+            @media only screen and (max-width: 1550px) {
+                width: 75%;
+            }
+
+            @media only screen and (max-width: 1200px) {
+                width: 80%;
+            }
+
+            @media only screen and (max-width: 1050px) {
+                width: 90%;
+            }
+        }
+
+        #tempSpot {
+
+            img {
+                @media only screen and (max-width: 1050px) {
+                    width: 10%;
+                }
+
+                @media only screen and (max-width: 550px) {
+                    width: 8%;
+                }
+            }
         }
     }
 
@@ -104,6 +222,16 @@ main {
             display: grid;
             grid-template-columns: 1fr 1fr;
             justify-items: center;
+
+            img {
+                @media only screen and (max-width: 1600px) {
+                    width: 80%;
+                }
+
+                @media only screen and (max-width: 1200px) {
+                    width: 90%;
+                }
+            }
         }
 
         #pictext-one,
@@ -111,6 +239,12 @@ main {
             display: grid;
             grid-template-columns: 1fr 1fr;
             text-align: center;
+
+            p {
+                @media only screen and (max-width: 1600px) {
+                    width: 80%;
+                }
+            }
         }
     }
 }
@@ -163,6 +297,12 @@ footer {
     picture {
         display: grid;
         justify-self: center;
+
+        img {
+            @media only screen and (max-width: 700px) {
+                        width: 65px;
+                    }
+        }
     }
 
     p {
