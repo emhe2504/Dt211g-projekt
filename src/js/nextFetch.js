@@ -25,34 +25,25 @@ function sendTime(jsonData) {
 
     /*Ta fram tid och tidszon, skicka vidare */
 
-    addTime(dateTime);
-    addTimeZone(zoneName, abbreviation);
+    addTime(dateTime, zoneName, abbreviation);
+    addTimeZone();
 }
 
 
-function addTime(dateTime) {
+function addTime(dateTime, zoneName, abbreviation) {
 
     const timeSpot = document.getElementById("timeSpot");
 
     timeSpot.innerHTML = "";
     timeSpot.innerHTML = `<p>Date and time in capital: ${dateTime}</p>`;
 
+    const timeZoneSpot = document.createElement("p");
+    timeZoneSpot.textContent = `Timezone: ${zoneName}, ${abbreviation}`;
+    timeSpot.appendChild(timeZoneSpot);
+
     if(!dateTime) {
 
         timeSpot.innerHTML = `<p>Date and time in capital: Can't find time</p>`;
-    }
-}
-
-
-function addTimeZone(zoneName, abbreviation) {
-
-    const timeZoneSpot = document.getElementById("timeZoneSpot");
-
-    timeZoneSpot.innerHTML = "";
-    timeZoneSpot.innerHTML = `<p>Timezone: ${zoneName}, ${abbreviation}</p>`;
-
-    if(!zoneName || !abbreviation) {
-
-        timeZoneSpot.innerHTML = `<p>Timezone: Can't find timezone</p>`;
+        timeZoneSpot.textContent = `Timezone: Can't find timezone`;
     }
 }

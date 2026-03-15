@@ -80,8 +80,15 @@ main {
             img {
                 display: grid;
                 justify-self: center;
-                width: 22%;
+                width: 25%;
             }
+        }
+
+        #restOfInfo,
+        #timeSpot,
+        #tempSpot {
+            display: grid;
+            width: 60%;
         }
     }
 

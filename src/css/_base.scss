@@ -90,22 +90,22 @@ main {
             width: 90%;
 
             #keywords {
-            list-style: none;
-            color: white;
-            margin-top: 6%;
-            padding-left: 0;
-        }
+                list-style: none;
+                color: white;
+                margin-top: 6%;
+                padding-left: 0;
+            }
         }
 
         #wrong {
 
             display: grid;
 
-             p {
+            p {
                 text-align: left;
                 font-weight: 300;
                 font-size: 14px;
-             }
+            }
         }
     }
 
@@ -155,49 +155,51 @@ main {
             }
         }
 
-        p {
-            font-size: 19px;
-            color: variables.$primary-color;
-            margin-left: 8%;
+        #restOfInfo,
+        #timeSpot,
+        #tempSpot {
+            background-color: white;
+            margin: 3%;
+            padding: 1%;
             letter-spacing: 0.5px;
+            color: variables.$primary-color;
+            font-size: 18px;
+            font-weight: bold;
         }
+        
+        #tempSpot {
 
-        #restOfInfo {
-            margin-bottom: 4%;
-        }
-
-        #timeZoneSpot {
-
-            p {
+            img {
                 margin-top: 0;
+                margin-left: 8%;
                 margin-bottom: 4%;
             }
         }
     }
 
     #about-section {
-    display: grid;
-    justify-self: center;
-    width: 70%;
-    background-color: variables.$primary-color;
-    letter-spacing: 0.5px;
-    line-height: 1.5em;
-    padding: 3%;
-    margin-top: 6%;
-    margin-bottom: 6%;
+        display: grid;
+        justify-self: center;
+        width: 70%;
+        background-color: variables.$primary-color;
+        letter-spacing: 0.5px;
+        line-height: 1.5em;
+        padding: 3%;
+        margin-top: 6%;
+        margin-bottom: 6%;
 
-    h2 {
-        font-size: 50px;
-        color: white;
-        margin-top: 4%;
-    }
+        h2 {
+            font-size: 50px;
+            color: white;
+            margin-top: 4%;
+        }
 
-    p,
-    ul {
-        color: white;
-        max-width: 58ch;
+        p,
+        ul {
+            color: white;
+            max-width: 58ch;
+        }
     }
-}
 }
 
 footer {
