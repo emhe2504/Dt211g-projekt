@@ -1,3 +1,13 @@
+
+#logo {
+
+    animation: moveLogo 2s ease-out 1;
+}
+
+#head:hover {
+    transform: translateY(-2px);
+}
+
 #search-button:hover,
 #close:hover {
     background-color: rgb(187, 214, 245);
@@ -6,13 +16,15 @@
 
 #nav-list {
 
-    li {
+    li:hover {
 
-        a:hover {
-        color: rgb(187, 214, 245);
-        border-bottom: 1px solid rgb(187, 214, 245);
-        transition: color 0.8s ease;
-        transition: border-bottom 0.6s ease;
+        transform: translateY(-2px);
     }
-    }
+}
+
+#dest1:hover,
+#dest2:hover,
+#dest3:hover,
+#dest4:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
