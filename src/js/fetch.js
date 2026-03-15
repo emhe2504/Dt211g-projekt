@@ -1,4 +1,5 @@
 import { getTime } from "./nextFetch.js";
+import { getWeather } from "./lastFetch.js";
 
 export async function getInfo(value) {
 
@@ -64,6 +65,7 @@ export function printInfo(jsonData, value) {
         restSpot.appendChild(capitalSpot);
 
         getTime(capital);   /*Anger stad till annat API för tid i huvustad */
+        getWeather(capital); /*Anger stad till annat API för väder huvustad */
 
 
         /*Skriv ut språk */

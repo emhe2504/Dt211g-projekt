@@ -3,6 +3,8 @@ import { closeInfo } from "./fetch.js";
 
 document.addEventListener("DOMContentLoaded", init);
 
+const search = document.getElementById("search-spot");
+
 function init() {
     searchInfo();
     closeInfo();
