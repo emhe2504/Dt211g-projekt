@@ -1,7 +1,8 @@
 
 export async function getTime(capital) {
 
-    const link = `https://api.timezonedb.com/v2.1/get-time-zone?key=7N7ARBIB953X&format=json&by=zone&zone=Europe/${capital}`;
+    const APIkey = "7N7ARBIB953X";
+    const link = `https://api.timezonedb.com/v2.1/get-time-zone?key=${APIkey}&format=json&by=zone&zone=Europe/${capital}`;
 
     
     try {
@@ -26,7 +27,6 @@ function sendTime(jsonData) {
     /*Ta fram tid och tidszon, skicka vidare */
 
     addTime(dateTime, zoneName, abbreviation);
-    addTimeZone();
 }
 
 

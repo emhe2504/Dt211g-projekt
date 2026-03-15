@@ -1,7 +1,8 @@
 
 export async function getWeather(capital) {
 
-    const link = `https://api.openweathermap.org/data/2.5/weather?q=${capital}&appid=ee3605817a74d55e0c0111a618e04922&units=metric`;
+    const APIkey = "ee3605817a74d55e0c0111a618e04922";
+    const link = `https://api.openweathermap.org/data/2.5/weather?q=${capital}&appid=${APIkey}&units=metric`;
 
 
     try {
