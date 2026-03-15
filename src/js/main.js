@@ -4,6 +4,7 @@ import { closeInfo } from "./fetch.js";
 document.addEventListener("DOMContentLoaded", init);
 
 const search = document.getElementById("search-spot");
+const wrong = document.getElementById("wrong");
 
 function init() {
     searchInfo();

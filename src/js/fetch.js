@@ -36,7 +36,6 @@ export function printInfo(jsonData, value) {
         const flagSpot = document.getElementById("flagSpot");
         const restSpot = document.getElementById("restOfInfo");
 
-        nameSpot.innerHTML = "";
         flagSpot.innerHTML = "";
         restSpot.innerHTML = "";
 
@@ -106,7 +105,6 @@ export function printInfo(jsonData, value) {
 
         const wrong = document.getElementById("wrong");
         const infoSpot = document.getElementById("result-section");
-        const search = document.getElementById("search-spot");
 
         wrong.classList.remove("is_hidden");
         infoSpot.classList.add("is_hidden");

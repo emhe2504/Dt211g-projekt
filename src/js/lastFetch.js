@@ -33,7 +33,6 @@ function addWeather(temp, description, weather, iconURL, capital) {
 
     const tempSpot = document.getElementById("tempSpot");
 
-    tempSpot.innerHTML = "";
     tempSpot.innerHTML = `<p>Temperature in ${capital}: ${temp} degrees.</p>`;
 
     const weatherSpot = document.createElement("p");
@@ -45,7 +44,7 @@ function addWeather(temp, description, weather, iconURL, capital) {
     img.alt = `Weather-icon`;
     tempSpot.appendChild(img);
 
-    if (!temp) {
+    if (temp === null) {
 
         tempSpot.innerHTML = `<p>Weather in capital: Can't find weather</p>`;
     }

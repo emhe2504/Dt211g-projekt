@@ -34,7 +34,6 @@ function addTime(dateTime, zoneName, abbreviation) {
 
     const timeSpot = document.getElementById("timeSpot");
 
-    timeSpot.innerHTML = "";
     timeSpot.innerHTML = `<p>Date and time in capital: ${dateTime}</p>`;
 
     const timeZoneSpot = document.createElement("p");
@@ -45,5 +44,11 @@ function addTime(dateTime, zoneName, abbreviation) {
 
         timeSpot.innerHTML = `<p>Date and time in capital: Can't find time</p>`;
         timeZoneSpot.textContent = `Timezone: Can't find timezone`;
+    }
+
+       if(!zoneName || !abbreviation) {
+
+        timeZoneSpot.textContent = `Timezone: Can't find timezone`;
+        timeSpot.appendChild(timeZoneSpot);
     }
 }
