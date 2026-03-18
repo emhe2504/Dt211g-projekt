@@ -1,6 +1,14 @@
 import { getTime } from "./nextFetch.js";
 import { getWeather } from "./lastFetch.js";
 
+/**
+ * Tar emot sökord från sökruta och skickar vidare till (printInfo).
+ * Fetchar landdata från API, samt skickar data från API
+ * till funktion (printInfo)
+ * @param {string} value - Sökord från sökruta
+ * @returns {Promise<void>}
+ */
+
 export async function getInfo(value) {
 
     const link = `https://restcountries.com/v3.1/region/europe?fields=name,capital,flags,languages,currencies,population`;
@@ -23,15 +31,38 @@ export async function getInfo(value) {
 }
 
 /**
- * Deklarera olika variabler för platser */
+ * Deklarera olika variabler för platser 
+ * */
 
-const infoSpot = document.getElementById("result-section");
-const nameSpot = document.getElementById("nameSpot");
-const flagSpot = document.getElementById("flagSpot");
-const restSpot = document.getElementById("restOfInfo");
-const destinations = document.getElementById("destination-section");
-const start = document.getElementById("start-section");
+/** @type {HTMLElement} */
+const infoSpot = document.getElementById("result-section"); // section för div:ar
 
+/** @type {HTMLDivElement} */
+const nameSpot = document.getElementById("nameSpot"); // div för landnamn
+
+/** @type {HTMLDivElement} */
+const flagSpot = document.getElementById("flagSpot"); // div för flagga
+
+/** @type {HTMLDivElement} */
+const restSpot = document.getElementById("restOfInfo"); // div för resterande landinfo
+
+/** @type {HTMLElement} */
+const destinations = document.getElementById("destination-section"); // section med reseförslag
+
+/** @type {HTMLDivElement} */
+const start = document.getElementById("start-section"); // div med starttext
+
+
+
+/**
+ * Visar information om land utifrån användarens sökning
+ * och restcountries API.
+ * Skriver ut landnamn, flagga, huvudstad, språk, valuta
+ * och population till skärmen.
+ * Skickar huvudstad till funktioner med fetch för tid och väder.
+ * @param {Object[]} jsonData - landdata från restcountries API
+ * @param {string} value - sökord från sökruta
+ */
 
 export function printInfo(jsonData, value) {
 
@@ -72,8 +103,8 @@ export function printInfo(jsonData, value) {
         capitalSpot.textContent = `Capital: ${capital}`;
         restSpot.appendChild(capitalSpot);
 
-        getTime(capital);   /*Anger stad till annat API för tid i huvustad */
-        getWeather(capital); /*Anger stad till annat API för väder huvustad */
+        getTime(capital);   /*Anger stad till annat API för tid i huvudstad */
+        getWeather(capital); /*Anger stad till annat API för väder huvudstad */
 
 
         /*Skriv ut språk */
@@ -123,6 +154,11 @@ export function printInfo(jsonData, value) {
 
     }
 }
+
+/**
+ * Skapar eventlyssnare på stäng-kanppen,
+ * döljer visad landinformation.
+ */
 
 export function closeInfo() {
 

@@ -1,5 +1,12 @@
 import { getInfo } from "./fetch.js";
 
+/**
+ * Tar värdet som skrivs in i sökruta (value),
+ * formaterar texten (stor första bokstav i alla ord),
+ * skickar vidare till första funktionen för fetch (getInfo)
+ * vid knapptryck.
+ */
+
 export function searchInfo() {
 
     const searchPlace = document.getElementById("search-spot");

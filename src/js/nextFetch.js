@@ -1,4 +1,11 @@
 
+
+/**
+ * Använder namn på huvudstad och
+ * tar fram API med aktuell tidsinformation från huvudstaden.
+ * @param {string} capital 
+ * @returns {Promise<void>}
+ */
 export async function getTime(capital) {
 
     const APIkey = "7N7ARBIB953X";
@@ -18,6 +25,12 @@ export async function getTime(capital) {
     }
 }
 
+/**
+ * Tar aktuell tid samt tidszon från timeZone API
+ * och skickar till addTime.
+ * @param {Object} jsonData 
+ */
+
 function sendTime(jsonData) {
 
     const dateTime = jsonData.formatted;
@@ -29,6 +42,12 @@ function sendTime(jsonData) {
     addTime(dateTime, zoneName, abbreviation);
 }
 
+/**
+ * Skriver ut tid och tidszon till DOM.
+ * @param {string} dateTime - aktuell tid och datum
+ * @param {string} zoneName - namn på tidszon
+ * @param {string} abbreviation - förkortning av tidszon
+ */
 
 function addTime(dateTime, zoneName, abbreviation) {
 

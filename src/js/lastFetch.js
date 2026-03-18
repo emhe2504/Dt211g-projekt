@@ -1,4 +1,11 @@
 
+/**
+ * Hämtar aktuell väderinformation för en huvudstad 
+ * via openweathermap API.
+ * @param {string} capital 
+ * @returns {Promise<void>}
+ */
+
 export async function getWeather(capital) {
 
     const APIkey = "ee3605817a74d55e0c0111a618e04922";
@@ -18,6 +25,15 @@ export async function getWeather(capital) {
     }
 }
 
+/**
+ * Tar aktuell temp, väder, väderbeskrivning och
+ * väder-icon från openweathermap API
+ * och skickar till addWeather. Skickar även
+ * aktuell huvudstad.
+ * @param {Object} jsonData
+ * @param {string} capital 
+ */
+
 function sendWeather(jsonData, capital) {
 
     const temp = jsonData.main.temp;
@@ -28,6 +44,16 @@ function sendWeather(jsonData, capital) {
 
     addWeather(temp, description, weather, iconURL, capital);
 }
+
+/**
+ * Skriver temp, väder, väderbeskrivning och
+ * väder-icon till DOM.
+ * @param {number} temp 
+ * @param {string} description 
+ * @param {string} weather 
+ * @param {string} iconURL 
+ * @param {string} capital 
+ */
 
 function addWeather(temp, description, weather, iconURL, capital) {
 
