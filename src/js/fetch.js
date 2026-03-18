@@ -30,7 +30,7 @@ const nameSpot = document.getElementById("nameSpot");
 const flagSpot = document.getElementById("flagSpot");
 const restSpot = document.getElementById("restOfInfo");
 const destinations = document.getElementById("destination-section");
-const search = document.getElementById("search-section");
+const start = document.getElementById("start-section");
 
 
 export function printInfo(jsonData, value) {
@@ -134,7 +134,7 @@ export function closeInfo() {
 
         if (infoSpot.classList.contains("is_hidden")) {
             destinations.classList.remove("is_hidden");
-            search.scrollIntoView();
+            start.scrollIntoView();
         }
     })
 }
