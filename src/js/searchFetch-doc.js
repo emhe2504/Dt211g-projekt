@@ -17,12 +17,13 @@ const wrong = document.getElementById("wrong"); //Div med felmeddelande
 function init() {
     searchInfo();
     closeInfo();
+    useKeyWords();
 
     if (wrong) {
-    search.addEventListener("input", () => {
-        wrong.classList.add("is_hidden");
-    });
-}
+        search.addEventListener("input", () => {
+            wrong.classList.add("is_hidden");
+        });
+    }
 }
 
 
@@ -37,21 +38,39 @@ function init() {
 
 function searchInfo() {
 
-    const searchPlace = document.getElementById("search-spot");
     const button = document.getElementById("search-button");
 
     button.addEventListener("click", () => {
 
         /*Ta ordet/orden i value, dela upp, stor första bokstav, resten små, sätt ihop */
-        
+
         const value = searchPlace.value
             .split(' ')
             .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
             .join(' ');
-            
+
         getInfo(value);
         searchPlace.value = "";
     });
+}
+
+
+/**
+ * Skapar eventlyssnare för tryck på sökförslag 
+ * och anger sökförslag som value.
+ */
+
+function useKeyWords() {
+
+    const keyWords = document.querySelectorAll("#keywords li");
+
+    keyWords.forEach(word => {
+
+        word.addEventListener("click", () => {
+
+            searchPlace.value = word.textContent;
+        })
+    })
 }
 
 
@@ -210,24 +229,4 @@ function printInfo(jsonData, value) {
         }
 
     }
-}
-
-/**
- * Skapar eventlyssnare på stäng-kanppen,
- * döljer visad landinformation.
- */
-
-function closeInfo() {
-
-    const closeButton = document.getElementById("close");
-
-    closeButton.addEventListener("click", () => {
-
-        infoSpot.classList.toggle("is_hidden");
-
-        if (infoSpot.classList.contains("is_hidden")) {
-            destinations.classList.remove("is_hidden");
-            start.scrollIntoView();
-        }
-    })
 }

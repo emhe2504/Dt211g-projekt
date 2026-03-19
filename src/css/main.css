@@ -1,0 +1,1081 @@
+#logo {
+  animation: moveLogo 2s ease-out 1;
+}
+
+#head:hover {
+  transform: translateY(-2px);
+}
+
+#search-button:hover,
+#close:hover {
+  background-color: rgb(187, 214, 245);
+  transition: background-color 0.8s ease;
+}
+
+#nav-list li:hover {
+  transform: translateY(-2px);
+}
+
+#dest1:hover,
+#dest2:hover,
+#dest3:hover,
+#dest4:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+#container {
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  background-color: #00809D;
+  padding: 2%;
+  padding-bottom: 0;
+}
+header h1 a {
+  text-decoration: none;
+  font-size: 60px;
+  color: white;
+  letter-spacing: 0.5px;
+  padding-left: 2%;
+}
+@media only screen and (max-width: 900px) {
+  header h1 a {
+    font-size: 50px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  header h1 a {
+    font-size: 40px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  header h1 a {
+    font-size: 30px;
+  }
+}
+header #nav-list {
+  list-style: none;
+  margin-bottom: 0;
+  margin-right: 4%;
+}
+@media only screen and (max-width: 600px) {
+  header #nav-list {
+    padding-left: 0;
+  }
+}
+header #nav-list a {
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid white;
+  font-weight: bold;
+}
+@media only screen and (max-width: 900px) {
+  header #nav-list a {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  header #nav-list a {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  header #nav-list a {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  header #nav-list a {
+    font-size: 11px;
+  }
+}
+
+main #start-section #start-text {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 2%;
+  padding-left: 8%;
+  padding-right: 8%;
+  text-align: center;
+  color: #00809D;
+}
+main #start-section #start-text h2 {
+  font-size: 50px;
+}
+@media only screen and (max-width: 1350px) {
+  main #start-section #start-text h2 {
+    font-size: 40px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  main #start-section #start-text h2 {
+    font-size: 35px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  main #start-section #start-text h2 {
+    font-size: 30px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  main #start-section #start-text h2 {
+    font-size: 24px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  main #start-section #start-text h2 {
+    font-size: 20px;
+  }
+}
+main #start-section #start-text p {
+  font-weight: bold;
+  font-size: 22px;
+  letter-spacing: 0.5px;
+}
+@media only screen and (max-width: 1350px) {
+  main #start-section #start-text p {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  main #start-section #start-text p {
+    font-size: 19px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  main #start-section #start-text p {
+    font-size: 17px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  main #start-section #start-text p {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  main #start-section #start-text p {
+    font-size: 12px;
+  }
+}
+main #search-section {
+  background-color: #00809D;
+}
+main #search-section h3 {
+  font-size: 24px;
+  color: white;
+  letter-spacing: 0.5px;
+}
+@media only screen and (max-width: 1200px) {
+  main #search-section h3 {
+    font-size: 22px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  main #search-section h3 {
+    font-size: 19px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  main #search-section h3 {
+    font-size: 17px;
+  }
+}
+main #search-section #search-start {
+  padding-left: 5%;
+}
+main #search-section p {
+  color: white;
+  font-weight: bold;
+  margin-bottom: 3%;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}
+@media only screen and (max-width: 1200px) {
+  main #search-section p {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  main #search-section p {
+    font-size: 13px;
+  }
+}
+main #search-section #landSuggestions {
+  display: grid;
+  justify-self: center;
+  border: 1px solid white;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  width: 90%;
+}
+main #search-section #landSuggestions #keywords {
+  line-height: 2em;
+  list-style: none;
+  color: white;
+  margin-top: 6%;
+  padding-left: 0;
+  text-decoration: underline;
+  cursor: pointer;
+}
+@media only screen and (max-width: 1200px) {
+  main #search-section #landSuggestions #keywords {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  main #search-section #landSuggestions #keywords {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  main #search-section #landSuggestions #keywords {
+    font-size: 10px;
+  }
+}
+main #search-section #wrong {
+  display: grid;
+}
+main #search-section #wrong p {
+  text-align: left;
+  font-weight: 300;
+  font-size: 14px;
+}
+@media only screen and (max-width: 1200px) {
+  main #search-section #wrong p {
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  main #search-section #wrong p {
+    font-size: 10px;
+  }
+}
+main #destination-section {
+  margin-top: 20%;
+}
+@media only screen and (max-width: 1650px) {
+  main #destination-section {
+    margin-top: 25%;
+  }
+}
+@media only screen and (max-width: 1400px) {
+  main #destination-section {
+    margin-top: 30%;
+  }
+}
+@media only screen and (max-width: 1050px) {
+  main #destination-section {
+    margin-top: 40%;
+  }
+}
+@media only screen and (max-width: 950px) {
+  main #destination-section {
+    margin-top: 55%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  main #destination-section {
+    margin-top: 65%;
+  }
+}
+@media only screen and (max-width: 650px) {
+  main #destination-section {
+    margin-top: 75%;
+  }
+}
+main #destination-section h3 {
+  font-size: 24px;
+  color: #00809D;
+  letter-spacing: 0.5px;
+}
+@media only screen and (max-width: 1050px) {
+  main #destination-section h3 {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  main #destination-section h3 {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 650px) {
+  main #destination-section h3 {
+    font-size: 15px;
+  }
+}
+main #destination-section #suggestion-one,
+main #destination-section #suggestion-two {
+  margin-top: 3%;
+}
+main #destination-section #suggestion-one picture img,
+main #destination-section #suggestion-two picture img {
+  border-radius: 10px;
+}
+main #destination-section #pictext-one,
+main #destination-section #pictext-two {
+  font-weight: bold;
+  margin-top: 2%;
+  margin-bottom: 3%;
+}
+@media only screen and (max-width: 1050px) {
+  main #destination-section #pictext-one p,
+  main #destination-section #pictext-two p {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 650px) {
+  main #destination-section #pictext-one p,
+  main #destination-section #pictext-two p {
+    font-size: 11px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  main #destination-section #pictext-one p,
+  main #destination-section #pictext-two p {
+    width: 100%;
+    font-size: 10px;
+  }
+}
+main #result-section {
+  border: 2px solid #00809D;
+  margin-top: 25%;
+  background-color: rgb(216, 239, 250);
+}
+@media only screen and (max-width: 1550px) {
+  main #result-section {
+    margin-top: 30%;
+  }
+}
+@media only screen and (max-width: 1050px) {
+  main #result-section {
+    margin-top: 45%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  main #result-section {
+    margin-top: 60%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  main #result-section {
+    margin-top: 65%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  main #result-section {
+    margin-top: 70%;
+  }
+}
+@media only screen and (max-width: 550px) {
+  main #result-section {
+    margin-top: 75%;
+  }
+}
+main #result-section h3 {
+  font-size: 24px;
+  color: #00809D;
+  letter-spacing: 0.5px;
+  margin-top: 3%;
+}
+@media only screen and (max-width: 700px) {
+  main #result-section h3 {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  main #result-section h3 {
+    font-size: 16px;
+  }
+}
+main #result-section #flagSpot {
+  margin-top: 3%;
+}
+main #result-section #flagSpot p {
+  padding-right: 5%;
+}
+main #result-section #flagSpot img {
+  margin: 3%;
+}
+main #result-section #restOfInfo,
+main #result-section #timeSpot,
+main #result-section #tempSpot {
+  background-color: white;
+  margin: 3%;
+  padding: 1%;
+  letter-spacing: 0.5px;
+  color: #00809D;
+  font-size: 18px;
+  font-weight: bold;
+}
+@media only screen and (max-width: 1050px) {
+  main #result-section #restOfInfo,
+  main #result-section #timeSpot,
+  main #result-section #tempSpot {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  main #result-section #restOfInfo,
+  main #result-section #timeSpot,
+  main #result-section #tempSpot {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 550px) {
+  main #result-section #restOfInfo,
+  main #result-section #timeSpot,
+  main #result-section #tempSpot {
+    font-size: 10px;
+  }
+}
+main #result-section #tempSpot img {
+  margin-top: 0;
+  margin-left: 8%;
+  margin-bottom: 4%;
+}
+main #about-section {
+  display: grid;
+  justify-self: center;
+  background-color: #00809D;
+  letter-spacing: 0.5px;
+  line-height: 1.5em;
+  padding: 3%;
+  margin-top: 6%;
+  margin-bottom: 6%;
+}
+main #about-section h2 {
+  font-size: 50px;
+  color: white;
+  margin-top: 4%;
+}
+@media only screen and (max-width: 1350px) {
+  main #about-section h2 {
+    font-size: 45px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  main #about-section h2 {
+    font-size: 38px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  main #about-section h2 {
+    font-size: 29px;
+  }
+}
+main #about-section p,
+main #about-section ul {
+  color: white;
+  max-width: 58ch;
+}
+@media only screen and (max-width: 1350px) {
+  main #about-section p,
+  main #about-section ul {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  main #about-section p,
+  main #about-section ul {
+    font-size: 13px;
+    max-width: 85%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  main #about-section p,
+  main #about-section ul {
+    font-size: 11px;
+  }
+}
+main #about-section p a,
+main #about-section ul a {
+  color: white;
+}
+@media only screen and (max-width: 1350px) {
+  main #about-section p a,
+  main #about-section ul a {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  main #about-section p a,
+  main #about-section ul a {
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  main #about-section p a,
+  main #about-section ul a {
+    font-size: 11px;
+  }
+}
+
+footer {
+  background-color: #00809D;
+  color: white;
+  letter-spacing: 0.5px;
+  line-height: 2em;
+  margin-top: 6%;
+}
+@media only screen and (max-width: 500px) {
+  footer {
+    line-height: 1.5em;
+  }
+}
+footer #instagram {
+  margin-top: 3%;
+}
+@media only screen and (max-width: 700px) {
+  footer #instagram h3 {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  footer #instagram h3 {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 1050px) {
+  footer #instagram h4 {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  footer #instagram h4 {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  footer #instagram h4 {
+    font-size: 13px;
+  }
+}
+footer #instagram p {
+  margin-top: 0;
+}
+@media only screen and (max-width: 700px) {
+  footer #instagram p {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  footer #instagram p {
+    font-size: 11px;
+  }
+}
+@media only screen and (max-width: 1050px) {
+  footer #link-section h4 {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  footer #link-section h4 {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  footer #link-section h4 {
+    font-size: 13px;
+  }
+}
+footer #link-section ul {
+  padding-left: 0;
+}
+footer #link-section ul li {
+  text-decoration: underline;
+  cursor: pointer;
+}
+@media only screen and (max-width: 700px) {
+  footer #link-section ul li {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  footer #link-section ul li {
+    font-size: 11px;
+  }
+}
+footer #link-section ul li a {
+  color: white;
+}
+@media only screen and (max-width: 700px) {
+  footer #link-section ul li a {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  footer #link-section ul li a {
+    font-size: 11px;
+  }
+}
+footer picture {
+  margin-top: 2%;
+}
+footer p {
+  margin-bottom: 3%;
+}
+@media only screen and (max-width: 700px) {
+  footer p {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  footer p {
+    font-size: 11px;
+  }
+}
+
+.is_hidden {
+  display: none !important;
+}
+
+.modak {
+  font-family: "Modak", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto {
+  font-family: "Roboto", sans-serif;
+}
+
+#search-spot {
+  width: 60%;
+  border: none;
+  padding: 1.5%;
+  padding-right: 0;
+  margin-bottom: 2%;
+}
+@media only screen and (max-width: 1200px) {
+  #search-spot {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #search-spot {
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  #search-spot::placeholder {
+    font-size: 11px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  input[type=text] {
+    font-size: 11px;
+  }
+}
+
+#search-button {
+  width: 12%;
+  border: none;
+  padding: 1%;
+  margin-bottom: 10%;
+  font-size: 16px;
+  font-weight: bold;
+  color: #00809D;
+  letter-spacing: 0.5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#close {
+  width: 12%;
+  border: 1px solid #00809D;
+  padding: 1%;
+  margin-bottom: 4%;
+  margin-left: 8%;
+  font-size: 16px;
+  font-weight: bold;
+  color: #00809D;
+  letter-spacing: 0.5px;
+  background-color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1200px) {
+  #search-button,
+  #close {
+    width: 14%;
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  #search-button,
+  #close {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #search-button,
+  #close {
+    width: 18%;
+    font-size: 11px;
+    margin-top: 2%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  #search-button,
+  #close {
+    width: 20%;
+    font-size: 10px;
+  }
+}
+
+@keyframes moveLogo {
+  0% {
+    transform: rotate(8deg);
+  }
+  50% {
+    transform: rotate(9deg);
+  }
+  100% {
+    transform: rotate(10deg);
+  }
+}
+header picture {
+  display: grid;
+  justify-self: center;
+}
+@media only screen and (max-width: 700px) {
+  header picture img {
+    width: 150px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  header picture img {
+    width: 120px;
+  }
+}
+header #header-text {
+  display: grid;
+  grid-template-columns: 70% 1fr;
+  align-items: baseline;
+}
+@media only screen and (max-width: 1200px) {
+  header #header-text {
+    grid-template-columns: 60% 1fr;
+  }
+}
+@media only screen and (max-width: 900px) {
+  header #header-text {
+    grid-template-columns: 55% 1fr;
+  }
+}
+header #nav-list {
+  display: grid;
+  grid-template-columns: 1fr 35%;
+  text-align: center;
+}
+@media only screen and (max-width: 500px) {
+  header #nav-list {
+    grid-template-columns: 1fr 40%;
+  }
+}
+
+main #start-section img {
+  width: 100%;
+}
+main #start-section #start-text {
+  position: absolute;
+  width: 45%;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media only screen and (max-width: 1550px) {
+  main #start-section #start-text {
+    top: 65%;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  main #start-section #start-text {
+    top: 60%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  main #start-section #start-text {
+    width: 60%;
+    top: 52%;
+  }
+}
+@media only screen and (max-width: 700px) {
+  main #start-section #start-text {
+    top: 41%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  main #start-section #start-text {
+    width: 65%;
+    top: 35%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  main #start-section #start-text {
+    top: 33%;
+  }
+}
+main #search-section {
+  display: grid;
+  width: 50%;
+  justify-self: center;
+  padding: 2%;
+  padding-top: 3%;
+  padding-bottom: 5%;
+  position: absolute;
+  top: 128%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media only screen and (max-width: 1550px) {
+  main #search-section {
+    top: 115%;
+    width: 55%;
+  }
+}
+@media only screen and (max-width: 1350px) {
+  main #search-section {
+    top: 110%;
+    width: 57%;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  main #search-section {
+    top: 100%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  main #search-section {
+    top: 92%;
+    width: 72%;
+  }
+}
+@media only screen and (max-width: 700px) {
+  main #search-section {
+    top: 76%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  main #search-section {
+    top: 65%;
+    width: 76%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  main #search-section {
+    top: 63%;
+  }
+}
+main #search-section #search-start {
+  display: grid;
+}
+main #search-section p {
+  display: grid;
+  text-align: center;
+}
+main #search-section #keywords {
+  display: grid;
+  justify-self: center;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  width: 95%;
+}
+@media only screen and (max-width: 1000px) {
+  main #search-section #keywords {
+    grid-template-columns: none;
+    line-height: 1.6em;
+  }
+}
+main #result-section {
+  display: grid;
+  justify-self: center;
+  width: 55%;
+}
+@media only screen and (max-width: 1200px) {
+  main #result-section {
+    width: 65%;
+  }
+}
+@media only screen and (max-width: 1050px) {
+  main #result-section {
+    width: 80%;
+  }
+}
+main #result-section #nameSpot {
+  display: grid;
+  text-align: center;
+}
+main #result-section #flagSpot {
+  display: grid;
+}
+main #result-section #flagSpot img {
+  display: grid;
+  justify-self: center;
+  width: 25%;
+}
+main #result-section #restOfInfo,
+main #result-section #timeSpot,
+main #result-section #tempSpot {
+  display: grid;
+  width: 60%;
+}
+@media only screen and (max-width: 1550px) {
+  main #result-section #restOfInfo,
+  main #result-section #timeSpot,
+  main #result-section #tempSpot {
+    width: 75%;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  main #result-section #restOfInfo,
+  main #result-section #timeSpot,
+  main #result-section #tempSpot {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 1050px) {
+  main #result-section #restOfInfo,
+  main #result-section #timeSpot,
+  main #result-section #tempSpot {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 1050px) {
+  main #result-section #tempSpot img {
+    width: 10%;
+  }
+}
+@media only screen and (max-width: 550px) {
+  main #result-section #tempSpot img {
+    width: 8%;
+  }
+}
+main #destination-section {
+  display: grid;
+  width: 65%;
+  justify-self: center;
+  padding: 2%;
+}
+main #destination-section h3 {
+  text-align: center;
+}
+main #destination-section #suggestion-one,
+main #destination-section #suggestion-two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+}
+@media only screen and (max-width: 1600px) {
+  main #destination-section #suggestion-one img,
+  main #destination-section #suggestion-two img {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  main #destination-section #suggestion-one img,
+  main #destination-section #suggestion-two img {
+    width: 90%;
+  }
+}
+main #destination-section #pictext-one,
+main #destination-section #pictext-two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+}
+@media only screen and (max-width: 1600px) {
+  main #destination-section #pictext-one p,
+  main #destination-section #pictext-two p {
+    width: 80%;
+  }
+}
+
+#about-section {
+  display: grid;
+  justify-self: center;
+  width: 75%;
+}
+@media only screen and (max-width: 1350px) {
+  #about-section {
+    width: 80%;
+  }
+}
+#about-section h2 {
+  justify-self: center;
+}
+#about-section #about-div {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+}
+@media only screen and (max-width: 1050px) {
+  #about-section #about-div {
+    grid-template-columns: none;
+  }
+}
+@media only screen and (max-width: 1350px) {
+  #about-section #about-div picture img {
+    width: 180px;
+  }
+}
+@media only screen and (max-width: 1050px) {
+  #about-section #about-div picture img {
+    margin-top: 10%;
+  }
+}
+@media only screen and (max-width: 700px) {
+  #about-section #about-div picture img {
+    width: 150px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  #about-section #about-div picture img {
+    width: 110px;
+  }
+}
+
+footer {
+  display: grid;
+  width: 100%;
+}
+footer h4 {
+  font-size: 20px;
+}
+footer #instagram {
+  display: grid;
+  justify-self: center;
+  text-align: center;
+}
+footer #link-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-self: center;
+  justify-items: center;
+  width: 60%;
+}
+footer #link-section ul {
+  list-style: none;
+}
+footer picture {
+  display: grid;
+  justify-self: center;
+}
+@media only screen and (max-width: 700px) {
+  footer picture img {
+    width: 65px;
+  }
+}
+footer p {
+  text-align: center;
+}
+
+/*# sourceMappingURL=main.css.map */

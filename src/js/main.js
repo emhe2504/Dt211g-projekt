@@ -1,5 +1,6 @@
 import { searchInfo } from "./search.js";
 import { closeInfo } from "./fetch.js";
+import { useKeyWords } from "./search.js";
 
 
 
@@ -21,10 +22,11 @@ const wrong = document.getElementById("wrong"); //Div med felmeddelande
 function init() {
     searchInfo();
     closeInfo();
+    useKeyWords();
 
     if (wrong) {
-    search.addEventListener("input", () => {
-        wrong.classList.add("is_hidden");
-    });
-}
+        search.addEventListener("input", () => {
+            wrong.classList.add("is_hidden");
+        });
+    }
 }

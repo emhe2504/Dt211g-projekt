@@ -184,10 +184,13 @@ main {
             width: 90%;
 
             #keywords {
+                line-height: 2em;
                 list-style: none;
                 color: white;
                 margin-top: 6%;
                 padding-left: 0;
+                text-decoration: underline;
+                cursor: pointer;
 
                 @media only screen and (max-width: 1200px) {
                     font-size: 14px;
@@ -195,6 +198,10 @@ main {
 
                 @media only screen and (max-width: 600px) {
                     font-size: 12px;
+                }
+
+                @media only screen and (max-width: 500px) {
+                    font-size: 10px;
                 }
             }
         }
@@ -268,6 +275,12 @@ main {
         #suggestion-one,
         #suggestion-two {
             margin-top: 3%;
+
+            picture {
+                img {
+                    border-radius: 10px;
+                }
+            }
         }
 
         #pictext-one,
@@ -331,6 +344,10 @@ main {
 
             @media only screen and (max-width: 700px) {
                 font-size: 20px;
+            }
+
+            @media only screen and (max-width: 500px) {
+                font-size: 16px;
             }
         }
 
@@ -459,13 +476,27 @@ footer {
     #instagram {
         margin-top: 3%;
 
-        h4 {
+        h3 {
             @media only screen and (max-width: 700px) {
-                font-size: 17px;
+                font-size: 16px;
             }
 
             @media only screen and (max-width: 500px) {
+                font-size: 14px;
+            }
+        }
+
+        h4 {
+            @media only screen and (max-width: 1050px) {
+                font-size: 16px;
+            }
+
+            @media only screen and (max-width: 700px) {
                 font-size: 15px;
+            }
+
+            @media only screen and (max-width: 500px) {
+                font-size: 13px;
             }
         }
 
@@ -485,12 +516,16 @@ footer {
     #link-section {
 
         h4 {
+            @media only screen and (max-width: 1050px) {
+                font-size: 16px;
+            }
+
             @media only screen and (max-width: 700px) {
-                font-size: 17px;
+                font-size: 15px;
             }
 
             @media only screen and (max-width: 500px) {
-                font-size: 15px;
+                font-size: 13px;
             }
         }
 

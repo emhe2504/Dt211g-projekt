@@ -11,7 +11,7 @@ export async function getTime(capital) {
     const APIkey = "7N7ARBIB953X";
     const link = `https://api.timezonedb.com/v2.1/get-time-zone?key=${APIkey}&format=json&by=zone&zone=Europe/${capital}`;
 
-    
+
     try {
 
         const linkData = await fetch(link);
@@ -19,7 +19,7 @@ export async function getTime(capital) {
 
         sendTime(jsonData);
 
-    } catch(error) {
+    } catch (error) {
 
         console.log(error);
     }
@@ -64,13 +64,13 @@ function addTime(dateTime, zoneName, abbreviation) {
     timeZoneSpot.textContent = `Timezone: ${zoneName}, ${abbreviation}`;
     timeSpot.appendChild(timeZoneSpot);
 
-    if(!dateTime) {
+    if (!dateTime) {
 
         timeSpot.innerHTML = `<p>Date and time in capital: Can't find time</p>`;
         timeZoneSpot.textContent = `Timezone: Can't find timezone`;
     }
 
-       if(!zoneName || !abbreviation) {
+    if (!zoneName || !abbreviation) {
 
         timeZoneSpot.textContent = `Timezone: Can't find timezone`;
         timeSpot.appendChild(timeZoneSpot);
