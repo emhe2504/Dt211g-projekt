@@ -25,6 +25,8 @@ export async function getTime(capital) {
     }
 }
 
+
+
 /**
  * Tar aktuell tid samt tidszon från timeZone API
  * och skickar till addTime.
@@ -41,6 +43,9 @@ function sendTime(jsonData) {
 
     addTime(dateTime, zoneName, abbreviation);
 }
+
+
+
 
 /**
  * Skriver ut tid och tidszon till DOM.
