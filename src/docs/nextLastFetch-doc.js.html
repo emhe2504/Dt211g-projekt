@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: nextLastFetch-doc.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: nextLastFetch-doc.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>
+/**
+ * Använder namn på huvudstad och
+ * tar fram API med aktuell tidsinformation från huvudstaden.
+ * @param {string} capital 
+ * @returns {Promise&lt;void>}
+ */
+async function getTime(capital) {
+
+    const APIkey = "7N7ARBIB953X";
+    const link = `https://api.timezonedb.com/v2.1/get-time-zone?key=${APIkey}&amp;format=json&amp;by=zone&amp;zone=Europe/${capital}`;
+
+    
+    try {
+
+        const linkData = await fetch(link);
+        const jsonData = await linkData.json();
+
+        sendTime(jsonData);
+
+    } catch(error) {
+
+        console.log(error);
+    }
+}
+
+/**
+ * Tar aktuell tid samt tidszon från timeZone API
+ * och skickar till addTime.
+ * @param {Object} jsonData 
+ */
+
+function sendTime(jsonData) {
+
+    const dateTime = jsonData.formatted;
+    const zoneName = jsonData.zoneName;
+    const abbreviation = jsonData.abbreviation;
+
+    /*Ta fram tid och tidszon, skicka vidare */
+
+    addTime(dateTime, zoneName, abbreviation);
+}
+
+/**
+ * Skriver ut tid och tidszon till DOM.
+ * @param {string} dateTime - aktuell tid och datum
+ * @param {string} zoneName - namn på tidszon
+ * @param {string} abbreviation - förkortning av tidszon
+ */
+
+function addTime(dateTime, zoneName, abbreviation) {
+
+    const timeSpot = document.getElementById("timeSpot");
+
+    timeSpot.innerHTML = `&lt;p>Date and time in capital: ${dateTime}&lt;/p>`;
+
+    const timeZoneSpot = document.createElement("p");
+    timeZoneSpot.textContent = `Timezone: ${zoneName}, ${abbreviation}`;
+    timeSpot.appendChild(timeZoneSpot);
+
+    if(!dateTime) {
+
+        timeSpot.innerHTML = `&lt;p>Date and time in capital: Can't find time&lt;/p>`;
+        timeZoneSpot.textContent = `Timezone: Can't find timezone`;
+    }
+
+       if(!zoneName || !abbreviation) {
+
+        timeZoneSpot.textContent = `Timezone: Can't find timezone`;
+        timeSpot.appendChild(timeZoneSpot);
+    }
+}
+
+
+
+
+/**
+ * Hämtar aktuell väderinformation för en huvudstad 
+ * via openweathermap API.
+ * @param {string} capital 
+ * @returns {Promise&lt;void>}
+ */
+
+async function getWeather(capital) {
+
+    const APIkey = "ee3605817a74d55e0c0111a618e04922";
+    const link = `https://api.openweathermap.org/data/2.5/weather?q=${capital}&amp;appid=${APIkey}&amp;units=metric`;
+
+
+    try {
+
+        const linkData = await fetch(link);
+        const jsonData = await linkData.json();
+
+        sendWeather(jsonData, capital);
+
+    } catch (error) {
+
+        console.log(error);
+    }
+}
+
+/**
+ * Tar aktuell temp, väder, väderbeskrivning och
+ * väder-icon från openweathermap API
+ * och skickar till addWeather. Skickar även
+ * aktuell huvudstad.
+ * @param {Object} jsonData
+ * @param {string} capital 
+ */
+
+function sendWeather(jsonData, capital) {
+
+    const temp = jsonData.main.temp;
+    const weather = jsonData.weather[0].main;
+    const description = jsonData.weather[0].description;
+    const icon = jsonData.weather[0].icon;
+    const iconURL = `https://openweathermap.org/img/wn/${icon}@2x.png`;
+
+    addWeather(temp, description, weather, iconURL, capital);
+}
+
+/**
+ * Skriver temp, väder, väderbeskrivning och
+ * väder-icon till DOM.
+ * @param {number} temp 
+ * @param {string} description 
+ * @param {string} weather 
+ * @param {string} iconURL 
+ * @param {string} capital 
+ */
+
+function addWeather(temp, description, weather, iconURL, capital) {
+
+    const tempSpot = document.getElementById("tempSpot");
+
+    tempSpot.innerHTML = `&lt;p>Temperature in ${capital}: ${temp} degrees.&lt;/p>`;
+
+    const weatherSpot = document.createElement("p");
+    weatherSpot.textContent = `Weather right now: ${weather}, ${description}.`;
+    tempSpot.appendChild(weatherSpot);
+
+    const img = document.createElement("img");
+    img.src = iconURL;
+    img.alt = `Weather-icon`;
+    tempSpot.appendChild(img);
+
+    if (temp === null) {
+
+        tempSpot.innerHTML = `&lt;p>Weather in capital: Can't find weather&lt;/p>`;
+    }
+
+    if (!description || !weather) {
+
+        weatherSpot.textContent = `Weather right now: Missing info`;
+    }
+}</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#addTime">addTime</a></li><li><a href="global.html#addWeather">addWeather</a></li><li><a href="global.html#closeInfo">closeInfo</a></li><li><a href="global.html#destinations">destinations</a></li><li><a href="global.html#flagSpot">flagSpot</a></li><li><a href="global.html#getInfo">getInfo</a></li><li><a href="global.html#getTime">getTime</a></li><li><a href="global.html#getWeather">getWeather</a></li><li><a href="global.html#infoSpot">infoSpot</a></li><li><a href="global.html#init">init</a></li><li><a href="global.html#nameSpot">nameSpot</a></li><li><a href="global.html#printInfo">printInfo</a></li><li><a href="global.html#restSpot">restSpot</a></li><li><a href="global.html#search">search</a></li><li><a href="global.html#searchInfo">searchInfo</a></li><li><a href="global.html#sendTime">sendTime</a></li><li><a href="global.html#sendWeather">sendWeather</a></li><li><a href="global.html#start">start</a></li><li><a href="global.html#wrong">wrong</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.5</a> on Thu Mar 19 2026 09:32:10 GMT+0100 (centraleuropeisk normaltid)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

@@ -7,7 +7,7 @@
     "dev": "vite",
     "build:js": "vite build",
     "build:sass": "sass src/css/main.scss dist/css/main.css",
-    "build:docs": "npx jsdoc src/js/diagram-doc.js src/js/map-doc.js -d dist/docs",
+    "build:docs": "npx jsdoc src/js/searchFetch-doc.js src/js/nextLastFetch-doc.js -d dist/docs",
     "build": "npm run build:sass && npm run build:js && npm run build:docs",
     "preview": "vite preview",
     "sass": "sass src/css/main.scss src/css/main.css --watch"
