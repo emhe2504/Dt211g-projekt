@@ -37,8 +37,8 @@ export async function getInfo(value) {
 /** @type {HTMLElement} */
 const infoSpot = document.getElementById("result-section"); // section för div:ar
 
-/** @type {HTMLHeadElement} */
-const nameSpot = document.getElementById("nameSpot"); // h3 för landnamn
+/** @type {HTMLDivElement} */
+const nameSpot = document.getElementById("nameSpot"); // div för landnamn
 
 /** @type {HTMLDivElement} */
 const flagSpot = document.getElementById("flagSpot"); // div för flagga
