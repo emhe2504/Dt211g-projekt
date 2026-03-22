@@ -11,3 +11,17 @@
         transform: rotate(10deg);
     }
 }
+
+@keyframes textColor {
+    0% {
+        color: #00809D;
+    }
+
+    50% {
+        color: #45bdd8;
+    }
+
+    100% {
+        color: white;
+    }
+}
