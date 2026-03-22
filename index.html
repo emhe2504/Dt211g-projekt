@@ -47,8 +47,11 @@
             </section>
             <section id="search-section" class="roboto">
                 <div id="search-start">
-                    <h3>Search by land in Europe:</h3>
+                    <h3>Search by land in Europe</h3>
+                    <div id="search-div">
+                    <label id="label" for="search-spot">Search: </label>
                     <input type="text" id="search-spot" placeholder="Ex. Spain">
+                    </div>
                     <div id="wrong" class="is_hidden">
                         <p>Can't find country, try again</p>
                     </div>
@@ -65,14 +68,14 @@
                     </ul>
                 </div>
             </section>
-            <section id="result-section" class="roboto is_hidden" aria-live="polite">
+            <div id="result-section" class="roboto is_hidden" aria-live="polite">
                 <h3 id="nameSpot"></h3>
                 <div id="flagSpot"></div>
                 <div id="restOfInfo"></div>
                 <div id="timeSpot"></div>
                 <div id="tempSpot"></div>
                 <button id="close" aria-label="Close country information">Close</button>
-            </section>
+            </div>
             <section id="destination-section" class="roboto">
                 <h3>Haven't decided on a destination yet?</h3>
                 <div id="suggestion-one">

@@ -170,6 +170,22 @@ main {
 
         #search-start {
             padding-left: 5%;
+
+            #search-div {
+
+                margin-top: 2%;
+                margin-bottom: 1%;
+
+                #label {
+                    margin-bottom: 1%;
+                    color: white;
+                    font-size: 16px;
+
+                    @media only screen and (max-width: 500px) {
+                        font-size: 11px;
+                    }
+                }
+            }
         }
 
         p {
