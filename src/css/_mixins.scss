@@ -2,11 +2,12 @@
 
 @mixin Placement() {
     display: grid;
-    width: 50%;
+    width: 70%;
     justify-self: center;
     padding: 2%;
     padding-top: 3%;
     padding-bottom: 5%;
+    margin-top: 2%;
 }
 
 @mixin secPlacement() {

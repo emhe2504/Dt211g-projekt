@@ -45,93 +45,42 @@ header {
 main {
 
     #start-section {
+
+        position: relative;
+        width: 100%;
+
         img {
             width: 100%;
+            height: auto;
+            display: block;
         }
 
         #start-text {
             position: absolute;
-            width: 45%;
-            top: 70%;
+            top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
 
-            @media only screen and (max-width: 1550px) {
-                top: 65%;
+            @media only screen and (max-width: 1150px) {
+                width: 45%;
             }
 
-            @media only screen and (max-width: 1200px) {
-                top: 60%;
-            }
-
-            @media only screen and (max-width: 900px) {
-                width: 60%;
-                top: 52%;
-            }
-
-            @media only screen and (max-width: 700px) {
-                top: 41%;
+            @media only screen and (max-width: 800px) {
+                width: 48%;
             }
 
             @media only screen and (max-width: 600px) {
-                width: 65%;
-                top: 35%;
-            }
-
-            @media only screen and (max-width: 600px) {
-                top: 33%;
-            }
-
-            @media only screen and (max-width: 450px) {
-                width: 70%;
-                top: 48%;
+                width: 55%;
             }
         }
     }
 
     #search-section {
         @include mixins.Placement();
-        position: absolute;
-        top: 128%;
-        left: 50%;
-        transform: translate(-50%, -50%);
 
-        @media only screen and (max-width: 1550px) {
-            top: 115%;
-            width: 55%;
-        }
-
-        @media only screen and (max-width: 1350px) {
-            top: 110%;
-            width: 57%;
-        }
-
-        @media only screen and (max-width: 1200px) {
-            top: 100%;
-        }
-
-        @media only screen and (max-width: 900px) {
-            top: 92%;
-            width: 72%;
-        }
-
-        @media only screen and (max-width: 700px) {
-            top: 76%;
-        }
-
-        @media only screen and (max-width: 600px) {
-            top: 65%;
-            width: 76%;
-        }
-
-        @media only screen and (max-width: 500px) {
-            top: 63%;
-        }
-
-        @media only screen and (max-width: 450px) {
-            top: 86%;
-            width: 80%;
-        }
+        @media only screen and (max-width: 1000px) {
+                width: 80%;
+            }
 
         #search-start {
             display: grid;

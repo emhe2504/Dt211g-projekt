@@ -91,21 +91,16 @@ main {
 
             h2 {
                 font-size: 50px;
-
-                @media only screen and (max-width: 1350px) {
-                    font-size: 40px;
-                }
-
-                @media only screen and (max-width: 1200px) {
+                @media only screen and (max-width: 1300px) {
                     font-size: 35px;
                 }
 
-                @media only screen and (max-width: 900px) {
-                    font-size: 30px;
+                @media only screen and (max-width: 800px) {
+                    font-size: 28px;
                 }
 
-                @media only screen and (max-width: 700px) {
-                    font-size: 24px;
+                @media only screen and (max-width: 670px) {
+                    font-size: 22px;
                 }
 
                 @media only screen and (max-width: 600px) {
@@ -118,20 +113,16 @@ main {
                 font-size: 22px;
                 letter-spacing: 0.5px;
 
-                @media only screen and (max-width: 1350px) {
-                    font-size: 20px;
+                @media only screen and (max-width: 1300px) {
+                    font-size: 18px;
                 }
 
-                @media only screen and (max-width: 1200px) {
-                    font-size: 19px;
-                }
-
-                @media only screen and (max-width: 900px) {
-                    font-size: 17px;
-                }
-
-                @media only screen and (max-width: 700px) {
+                @media only screen and (max-width: 800px) {
                     font-size: 15px;
+                }
+
+                @media only screen and (max-width: 670px) {
+                    font-size: 13px;
                 }
 
                 @media only screen and (max-width: 600px) {
@@ -236,39 +227,7 @@ main {
 
     #destination-section {
 
-        margin-top: 20%;
-
-        @media only screen and (max-width: 1650px) {
-            margin-top: 25%;
-        }
-
-        @media only screen and (max-width: 1400px) {
-            margin-top: 30%;
-        }
-
-        @media only screen and (max-width: 1050px) {
-            margin-top: 40%;
-        }
-
-        @media only screen and (max-width: 950px) {
-            margin-top: 55%;
-        }
-
-        @media only screen and (max-width: 800px) {
-            margin-top: 65%;
-        }
-
-        @media only screen and (max-width: 650px) {
-            margin-top: 75%;
-        }
-
-        @media only screen and (max-width: 500px) {
-            margin-top: 85%;
-        }
-
-        @media only screen and (max-width: 450px) {
-            margin-top: 98%;
-        }
+        margin-top: 5%;
 
         h3 {
             font-size: 24px;
@@ -325,40 +284,8 @@ main {
 
     #result-section {
         border: 2px solid variables.$primary-color;
-        margin-top: 25%;
+        margin-top: 5%;
         background-color: rgb(216, 239, 250);
-
-        @media only screen and (max-width: 1550px) {
-            margin-top: 30%;
-        }
-
-        @media only screen and (max-width: 1050px) {
-            margin-top: 45%;
-        }
-
-        @media only screen and (max-width: 900px) {
-            margin-top: 60%;
-        }
-
-        @media only screen and (max-width: 720px) {
-            margin-top: 65%;
-        }
-
-        @media only screen and (max-width: 600px) {
-            margin-top: 70%;
-        }
-
-        @media only screen and (max-width: 550px) {
-            margin-top: 75%;
-        }
-
-        @media only screen and (max-width: 500px) {
-            margin-top: 85%;
-        }
-
-        @media only screen and (max-width: 450px) {
-            margin-top: 98%;
-        }
 
         h3 {
             font-size: 24px;
