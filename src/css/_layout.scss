@@ -29,6 +29,10 @@ header {
         @media only screen and (max-width: 900px) {
             grid-template-columns: 55% 1fr;
         }
+
+        @media only screen and (max-width: 450px) {
+            grid-template-columns: 50% 1fr;
+        }
     }
 
     #nav-list {
@@ -83,7 +87,8 @@ main {
             }
 
             @media only screen and (max-width: 450px) {
-                top: 45%;
+                width: 70%;
+                top: 52%;
             }
         }
     }
@@ -128,7 +133,7 @@ main {
         }
 
         @media only screen and (max-width: 450px) {
-            top: 72%;
+            top: 80%;
         }
 
         #search-start {
@@ -165,6 +170,10 @@ main {
 
         @media only screen and (max-width: 1050px) {
             width: 80%;
+        }
+
+        @media only screen and (max-width: 450px) {
+            width: 90%;
         }
 
         #nameSpot {
@@ -217,6 +226,10 @@ main {
 
     #destination-section {
         @include mixins.secPlacement();
+
+        @media only screen and (max-width: 450px) {
+            width: 75%;
+        }
 
         h3 {
             text-align: center;
