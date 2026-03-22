@@ -81,6 +81,10 @@ main {
             @media only screen and (max-width: 600px) {
                 top: 33%;
             }
+
+            @media only screen and (max-width: 450px) {
+                top: 45%;
+            }
         }
     }
 
@@ -121,6 +125,10 @@ main {
 
         @media only screen and (max-width: 500px) {
             top: 63%;
+        }
+
+        @media only screen and (max-width: 450px) {
+            top: 72%;
         }
 
         #search-start {
