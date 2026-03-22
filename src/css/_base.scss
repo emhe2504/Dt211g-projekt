@@ -150,7 +150,7 @@ main {
     #search-section {
         @include mixins.Design();
 
-        #nameSpot {
+        h3 {
             font-size: 24px;
             color: white;
             letter-spacing: 0.5px;
@@ -318,7 +318,7 @@ main {
         margin-top: 5%;
         background-color: rgb(216, 239, 250);
 
-        h3 {
+        #nameSpot {
             font-size: 24px;
             color: variables.$primary-color;
             letter-spacing: 0.5px;
