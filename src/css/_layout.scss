@@ -1,6 +1,7 @@
 @use "mixins";
 
 header {
+    display: grid;
 
     picture {
         display: grid;
@@ -43,6 +44,7 @@ header {
 }
 
 main {
+    display: grid;
 
     #start-section {
 
