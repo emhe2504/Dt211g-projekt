@@ -29,10 +29,6 @@ header {
         @media only screen and (max-width: 900px) {
             grid-template-columns: 55% 1fr;
         }
-
-        @media only screen and (max-width: 450px) {
-            grid-template-columns: 50% 1fr;
-        }
     }
 
     #nav-list {
